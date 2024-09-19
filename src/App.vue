@@ -1,9 +1,9 @@
 <script setup lang="ts">
 
-function openForm() {
-  document.getElementById('contactUs').style.display = "block";
-  document.getElementById('openCta').style.display = "none";
-}
+// function openForm() {
+//   document.getElementById('contactUs').style.display = "block";
+//   document.getElementById('openCta').style.display = "none";
+// }
 
 // function closeForm() {
 //   document.getElementById('contactUs').style.display = "none";
@@ -16,14 +16,14 @@ function openForm() {
   <main class="w-screen h-screen bg-Green_200 grid place-content-center">
     <section class="">
       <!--CTA OPEN FORM-->
-      <div id="openCta" class="grid place-content-center">
-        <button @click="openForm" class="bg-Green_600 text-white w-44 h-10 rounded-md">Get in touch</button>
-      </div>
-      <form id="contactUs" class="hidden bg-white w-[500px] py-6 px-5 [&_label]:text-xs rounded-md" action="">
+<!--      <div id="openCta" class="grid place-content-center">-->
+<!--        <button @click="openForm" class="bg-Green_600 text-white w-44 h-10 rounded-md">Get in touch</button>-->
+<!--      </div>-->
+      <form id="contactUs" class=" bg-white w-[500px] py-6 px-5 [&_label]:text-xs rounded-md max-md:w-[300px]" action="">
         <h1 class="font-bold text-xl py-4">Contact Us</h1>
         <!--NAME-->
         <fieldset
-            class="flex justify-between gap-3 [&_input]:my-1 [&_input]:py-1 [&_input]:px-2 [&_input]:border [&_input]:border-slate-400/80 [&_input]:w-full [&_input]:rounded-md">
+            class="flex max-md:grid justify-between gap-3 [&_input]:my-1 [&_input]:py-1 [&_input]:px-2 [&_input]:border [&_input]:border-slate-400/80 [&_input]:w-full [&_input]:rounded-md">
           <div class="flex-col">
             <label for="">
               First Name *
@@ -51,7 +51,7 @@ function openForm() {
           <label for="">
             Query Type *
           </label>
-          <section class="flex gap-3 [&_div]:flex [&_div]:gap-2 [&_div]:py-3 [&_div]:my-3 [&_div]:px-5 [&_div]:w-full [&_div]:border [&_div]:border-slate-400/80 [&_div]:rounded-md">
+          <section class="flex max-md:grid gap-3 max-md:gap-0 [&_div]:flex [&_div]:gap-2 [&_div]:py-3 [&_div]:my-3 [&_div]:max-md:my-2 [&_div]:px-5 [&_div]:w-full [&_div]:border [&_div]:border-slate-400/80 [&_div]:rounded-md">
             <div>
               <input type="radio">
               <label for="">General Enquiry</label>
