@@ -12,6 +12,7 @@ function closeForm() {
 function submit () {
   document.getElementById('toast').style.display = "block";
   document.getElementById('contactUs').style.display = "none";
+  console.log("message sent");
 }
 
 
@@ -45,7 +46,7 @@ function submit () {
             <label for="lastName">
               Last Name *
             </label>
-            <input placeholder="Doe" id="lastName" class="focus:bg-Green_200 transition duration-200 placeholder-slate-400/80 placeholder:text-sm" type="text">
+            <input placeholder="Doe" id="lastName" class="focus:bg-Green_200 transition duration-200 placeholder-slate-400/80 placeholder:text-sm" type="text" required>
           </div>
         </fieldset>
         <!--EMAIL-->
@@ -54,21 +55,21 @@ function submit () {
           <label for="email">
             Email Address *
           </label>
-          <input placeholder="you@exemple.com" id="email" class="focus:bg-Green_200 transition duration-200 placeholder-slate-400/80 placeholder:text-sm" type="text">
+          <input autocomplete="on" placeholder="you@exemple.com" id="email" class="focus:bg-Green_200 transition duration-200 placeholder-slate-400/80 placeholder:text-sm" type="text" required>
           <p class="invisible text-xs text-red-600">Enter a valid email address</p>
         </div>
         <!--TYPE-->
         <fieldset>
-          <label for="">
+          <label>
             Query Type *
           </label>
           <section class="flex max-md:grid gap-3 max-md:gap-0 [&_div]:flex [&_div]:gap-2 [&_div]:py-3 [&_div]:my-3 [&_div]:max-md:my-2 [&_div]:px-5 [&_div]:w-full [&_div]:border [&_div]:border-slate-400/80 [&_div]:rounded-md">
             <div>
-              <input id="radio_one" type="radio">
+              <input id="radio_one" type="radio" required>
               <label @click="clearRadio" id="generalRadio" for="radio_one">General Enquiry</label>
             </div>
             <div>
-              <input id="radio_two" type="radio">
+              <input id="radio_two" type="radio" required>
               <label for="radio_two">Support Request</label>
             </div>
           </section>
@@ -76,8 +77,8 @@ function submit () {
         <!--MESSAGE-->
         <fieldset
             class="flex flex-col [&_textarea]:border [&_textarea]:border-slate-400/80 [&_textarea]:w-full [&_textarea]:h-20 max-md:[&_textarea]:h-52 [&_textarea]:px-2 [&_textarea]:rounded-md">
-          <label class="py-2 pt-6" for="">Message *</label>
-          <textarea type="text"></textarea>
+          <label class="py-2 pt-6" for="message">Message *</label>
+          <textarea id="message" type="text"></textarea>
         </fieldset>
         <!--CHECKBOX-->
         <div class="flex items-center gap-3 py-6 [&_label]:text-sm">
