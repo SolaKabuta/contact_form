@@ -28,7 +28,7 @@ function submit () {
     <section class="">
       <!--CTA OPEN FORM-->
       <div id="openCta" class="grid place-content-center">
-        <button @click="openForm" class="bg-Green_600 text-white text-xl w-44 h-20 rounded-md hover:bg-Grey_900 transition duration-300">Get in touch</button>
+        <button @click="openForm" class="bg-Green_600 text-white text-xl w-44 h-20 rounded-md hover:bg-Grey_900 transition duration-300">Get in touch !</button>
       </div>
       <form id="contactUs" class="hidden bg-white w-[500px] py-6 px-5 [&_label]:text-xs rounded-md max-md:w-[300px]" action="">
         <h1 class="font-bold text-xl py-4">Contact Us</h1>
@@ -90,7 +90,7 @@ function submit () {
     </section>
     <!--TOAST MESSAGE-->
     <div  class="grid place-content-center">
-      <p id="toast" class="hidden bg-Green_600 py-12 px-8 w-full text-white text-xl text-center rounded-md">Yay! Contact successfully sent</p>
+      <p id="toast" class="hidden bg-Grey_900 py-12 px-8 w-full text-white text-xl text-center rounded-md">Yay! Contact successfully sent</p>
     </div>
   </main>
 </template>
