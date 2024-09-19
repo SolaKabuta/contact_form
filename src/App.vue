@@ -60,16 +60,17 @@ function submit () {
         </div>
         <!--TYPE-->
         <fieldset>
-          <label>
+          <label for="radio_one">
             Query Type *
           </label>
           <section class="flex max-md:grid gap-3 max-md:gap-0 [&_div]:flex [&_div]:gap-2 [&_div]:py-3 [&_div]:my-3 [&_div]:max-md:my-2 [&_div]:px-5 [&_div]:w-full [&_div]:border [&_div]:border-slate-400/80 [&_div]:rounded-md">
+            <!--adding name attribute to both input prevent them to be both selected-->
             <div>
-              <input id="radio_one" type="radio" required>
-              <label @click="clearRadio" id="generalRadio" for="radio_one">General Enquiry</label>
+              <input id="radio_one" type="radio" required name="type">
+              <label id="generalRadio" for="radio_one" >General Enquiry</label>
             </div>
             <div>
-              <input id="radio_two" type="radio" required>
+              <input id="radio_two" type="radio" required name="type">
               <label for="radio_two">Support Request</label>
             </div>
           </section>
