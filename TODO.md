@@ -1,17 +1,13 @@
 ````bash
 # TODO
 
-- Add margin or padding to each labels except General and Suppoort
-
 - Make the button clickable
 
-Complete the form and see a success toast message upon successful submission
 Receive form validation messages if:
 A required field has been missed (maybe render a error message with v-if under the specific field)
 The email address is not formatted correctly
 Complete the form only using their keyboard
 Have inputs, error messages, and the success message announced on their screen reader
-View the optimal layout for the interface depending on their device`s screen size
 See hover and focus states for all interactive elements on the page
 
 
