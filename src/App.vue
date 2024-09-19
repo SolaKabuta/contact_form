@@ -5,7 +5,7 @@
   <main class="w-screen h-screen bg-Green_200 grid place-content-center">
     <section class="">
       <!--<button></button>-->
-      <form class="bg-white w-[500px] py-6 px-5 rounded-md" action="">
+      <form class="bg-white w-[500px] py-6 px-5 [&_label]:text-xs rounded-md" action="">
         <h1 class="font-bold text-xl py-4">Contact Us</h1>
         <!--NAME-->
         <fieldset
@@ -26,18 +26,19 @@
         <!--EMAIL-->
         <div
             class="flex-col [&_input]:my-1 [&_input]:py-1 [&_input]:px-2 [&_input]:border [&_input]:border-slate-400/80 [&_input]:w-full [&_input]:rounded-md">
-          <label class="" for="">
+          <label for="">
             Email Address *
           </label>
           <input type="text">
+          <p class="invisible text-xs text-red-600">Enter a valid email address</p>
         </div>
         <!--TYPE-->
-        <fieldset class="">
+        <fieldset>
           <label for="">
             Query Type *
           </label>
-          <section class="flex justify-between gap-3 [&_div]:flex [&_div]:gap-2 [&_div]:py-2 [&_div]:px-2 [&_div]:w-full [&_div]:border [&_div]:border-slate-400/80 [&_div]:rounded-md">
-            <div class="">
+          <section class="flex justify-between gap-3 [&_div]:flex [&_div]:gap-2 [&_div]:py-3 [&_div]:my-3 [&_div]:px-2 [&_div]:w-full [&_div]:border [&_div]:border-slate-400/80 [&_div]:rounded-md">
+            <div>
               <input type="radio">
               <label for="">General Enquiry</label>
             </div>
@@ -49,8 +50,8 @@
         </fieldset>
         <!--MESSAGE-->
         <fieldset
-            class="flex flex-col [&_input]:border [&_input]:border-slate-400/80 [&_input]:w-full [&_input]:h-24 [&_input]:rounded-md">
-          <label for="">Message</label>
+            class="flex flex-col [&_input]:border [&_input]:border-slate-400/80 [&_input]:w-full [&_input]:h-20 [&_input]:rounded-md">
+          <label class="py-2 pt-6" for="">Message</label>
           <input type="text">
         </fieldset>
         <!--RADIO-->
