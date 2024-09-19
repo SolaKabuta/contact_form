@@ -1,11 +1,25 @@
 <script setup lang="ts">
+
+function openForm() {
+  document.getElementById('contactUs').style.display = "block";
+  document.getElementById('openCta').style.display = "none";
+}
+
+// function closeForm() {
+//   document.getElementById('contactUs').style.display = "none";
+// }
+
+
 </script>
 
 <template>
   <main class="w-screen h-screen bg-Green_200 grid place-content-center">
     <section class="">
-      <!--<button></button>-->
-      <form class="bg-white w-[500px] py-6 px-5 [&_label]:text-xs rounded-md" action="">
+      <!--CTA OPEN FORM-->
+      <div id="openCta" class="grid place-content-center">
+        <button @click="openForm" class="bg-Green_600 text-white w-44 h-10 rounded-md">Get in touch</button>
+      </div>
+      <form id="contactUs" class="hidden bg-white w-[500px] py-6 px-5 [&_label]:text-xs rounded-md" action="">
         <h1 class="font-bold text-xl py-4">Contact Us</h1>
         <!--NAME-->
         <fieldset
@@ -37,7 +51,7 @@
           <label for="">
             Query Type *
           </label>
-          <section class="flex justify-between gap-3 [&_div]:flex [&_div]:gap-2 [&_div]:py-3 [&_div]:my-3 [&_div]:px-2 [&_div]:w-full [&_div]:border [&_div]:border-slate-400/80 [&_div]:rounded-md">
+          <section class="flex gap-3 [&_div]:flex [&_div]:gap-2 [&_div]:py-3 [&_div]:my-3 [&_div]:px-5 [&_div]:w-full [&_div]:border [&_div]:border-slate-400/80 [&_div]:rounded-md">
             <div>
               <input type="radio">
               <label for="">General Enquiry</label>
@@ -50,11 +64,11 @@
         </fieldset>
         <!--MESSAGE-->
         <fieldset
-            class="flex flex-col [&_input]:border [&_input]:border-slate-400/80 [&_input]:w-full [&_input]:h-20 [&_input]:rounded-md">
-          <label class="py-2 pt-6" for="">Message</label>
-          <input type="text">
+            class="flex flex-col [&_textarea]:border [&_textarea]:border-slate-400/80 [&_textarea]:w-full [&_textarea]:h-20 [&_textarea]:px-2 [&_textarea]:rounded-md">
+          <label class="py-2 pt-6" for="">Message *</label>
+          <textarea type="text"></textarea>
         </fieldset>
-        <!--RADIO-->
+        <!--CHECKBOX-->
         <div class="flex items-center gap-3 py-6 [&_label]:text-sm">
           <input type="checkbox" required>
           <label for="">I consent to being contacted by the team *</label>
