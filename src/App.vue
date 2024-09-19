@@ -31,7 +31,8 @@ function submit () {
       <div id="openCta" class="grid place-content-center">
         <button @click="openForm" class="bg-Green_600 text-white text-xl w-44 h-20 rounded-md hover:bg-Grey_900 transition duration-300">Get in touch !</button>
       </div>
-      <form id="contactUs" class="hidden bg-white w-[500px] py-6 px-5 [&_label]:text-xs rounded-md max-md:w-[300px]" action="">
+      <!--"event.keycode === 13" actually equal to "Enter" so it prevent the user to press it and submit that way-->
+      <form onkeydown="if(event.keyCode === 13) {return false;}" id="contactUs" class="hidden bg-white w-[500px] py-6 px-5 [&_label]:text-xs rounded-md max-md:w-[300px]" action="">
         <h1 class="font-bold text-xl py-4">Contact Us</h1>
         <!--NAME-->
         <fieldset
@@ -46,7 +47,7 @@ function submit () {
             <label for="lastName">
               Last Name *
             </label>
-            <input placeholder="Doe" id="lastName" class="focus:bg-Green_200 transition duration-200 placeholder-slate-400/80 placeholder:text-sm" type="text" required>
+            <input placeholder="Doe" id="lastName" class="focus:bg-Green_200 focus:border-red-600 transition duration-200 placeholder-slate-400/80 placeholder:text-sm" type="text" required>
           </div>
         </fieldset>
         <!--EMAIL-->
@@ -55,8 +56,7 @@ function submit () {
           <label for="email">
             Email Address *
           </label>
-          <input autocomplete="on" placeholder="you@exemple.com" id="email" class="focus:bg-Green_200 transition duration-200 placeholder-slate-400/80 placeholder:text-sm" type="text" required>
-          <p class="invisible text-xs text-red-600">Enter a valid email address</p>
+          <input autocomplete="on" placeholder="you@exemple.com" id="email" onblur="checkValidity('test', '@', '', 'Invalid mail entered (requires both first and last name)');" class="focus:bg-Green_200 invalid:text-pink-600 transition duration-200 placeholder-slate-400/80 placeholder:text-sm" type="text" required>
         </div>
         <!--TYPE-->
         <fieldset>
