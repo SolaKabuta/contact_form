@@ -36,25 +36,25 @@ function submit () {
         <fieldset
             class="flex max-md:grid justify-between gap-3 [&_input]:my-1 [&_input]:py-1 [&_input]:px-2 [&_input]:border [&_input]:border-slate-400/80 [&_input]:w-full [&_input]:rounded-md">
           <div class="flex-col">
-            <label for="">
+            <label for="firstName">
               First Name *
             </label>
-            <input class="" type="text">
+            <input placeholder="Jane" id="firstName" class="focus:bg-Green_200 transition duration-200 placeholder-slate-400/80 placeholder:text-sm" type="text">
           </div>
           <div class="flex-col">
-            <label for="">
+            <label for="lastName">
               Last Name *
             </label>
-            <input type="text">
+            <input placeholder="Doe" id="lastName" class="focus:bg-Green_200 transition duration-200 placeholder-slate-400/80 placeholder:text-sm" type="text">
           </div>
         </fieldset>
         <!--EMAIL-->
         <div
             class="flex-col [&_input]:my-1 [&_input]:py-1 [&_input]:px-2 [&_input]:border [&_input]:border-slate-400/80 [&_input]:w-full [&_input]:rounded-md">
-          <label for="">
+          <label for="email">
             Email Address *
           </label>
-          <input type="text">
+          <input placeholder="you@exemple.com" id="email" class="focus:bg-Green_200 transition duration-200 placeholder-slate-400/80 placeholder:text-sm" type="text">
           <p class="invisible text-xs text-red-600">Enter a valid email address</p>
         </div>
         <!--TYPE-->
